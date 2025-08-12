@@ -50,13 +50,18 @@
       <p class="desc">Oops! Now under destruction.</p>
       <div class="actions">
         <a class="btn btn-primary">Go Home</a>
-        <a class="btn btn-ghost">Sitemap</a>
+        <button class="btn btn-ghost" id="retryBtn">Retry</button>
       </div>
       <div class="note">If you believe this is an error, please contact the site owner.</div>
     </main>
   </div>
 
   <script>
+    // Retry button reloads the page
+    document.getElementById('retryBtn').addEventListener('click', () => {
+      location.reload();
+    });
+
     // settings
     const ICON_COUNT = 10;              // pick 10 icons
     const ICON_POOL = Array.from({length:11}, (_,i)=>String(i+1).padStart(2,'0')); // 01..11

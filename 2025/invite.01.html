@@ -8,10 +8,10 @@
   <!-- Open Graph / Link Preview -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="여러모로합창단 2회 정기공연 · 감사의 초대">
-  <meta property="og:description" content="함께해주신 모든 분들께 드리는 작고 단단한 감사의 마음. 공연 정보와 참석 회신(눌러서 RSVP)까지 한 곳에서.">
+  <meta property="og:description" content="함께해주신 모든 분들께 드리는 작고 단단한 감사의 마음을 담은 초대장">
   <!-- TODO: 아래 이미지를 실제 경로로 교체하세요 (1200x630 권장) -->
-  <meta property="og:image" content="https://example.com/og/yeoleomolo_1200x630.png">
-  <meta property="og:url" content="https://thx.example.com/">
+  <meta property="og:image" content="https://yeoleomolo.github.io/assets/img/og_yeoleomolo_1200.jpg">
+  <meta property="og:url" content="https://yeoleomolo.github.io/2025/invite.01.html">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon (선택) -->
@@ -126,7 +126,7 @@
     <footer>
       <div class="copybox">
         <div class="small">© 2025 여러모로합창단</div>
-        <div class="small muted">문의: <a href="mailto:contact@example.com">contact@example.com</a> · 010-0000-0000</div>
+        <div class="small muted">문의: <a href="mailto:yeoleomolo617@gmail.com">yeoleomolo617@gmail.com</a></div>
       </div>
     </footer>
   </div>
@@ -166,7 +166,7 @@
     document.getElementById('addCalBtn')?.addEventListener('click', () => {
       // TODO: 실제 공연 시간대에 맞춰 수정하세요 (아래는 KST 2025-08-22 19:00 → UTC 10:00 가정)
       const dtStart = '20250822T100000Z';
-      const dtEnd   = '20250822T120000Z';
+      const dtEnd   = '20250822T130000Z';
       const ics = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Yeoleomolo Choir//Invite//KR\nCALSCALE:GREGORIAN\nBEGIN:VEVENT\nUID:${Date.now()}@thx.example.com\nDTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').replace(/\..+/,'Z')}\nDTSTART:${dtStart}\nDTEND:${dtEnd}\nSUMMARY:여러모로합창단 제2회 정기공연\nLOCATION:향린교회 2층 대예배실\nDESCRIPTION:함께해주신 모든 분들께 드리는 감사의 무대\nEND:VEVENT\nEND:VCALENDAR`;
       const blob = new Blob([ics], {type:'text/calendar'});
       const url = URL.createObjectURL(blob);
@@ -176,8 +176,6 @@
       URL.revokeObjectURL(url);
     });
 
-    // 5) GA4/Matomo 등 분석툴을 쓰는 경우, rid를 이벤트로 전송하세요 (예시)
-    // if (window.gtag){ gtag('event','landing_view',{rid: localStorage.getItem('rid')||'(none)'}); }
   </script>
 
   <!-- 구조화 데이터: 이벤트(검색/캘린더 친화) -->

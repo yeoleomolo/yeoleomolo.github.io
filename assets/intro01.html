@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 · Oops! Page not found.</title>
+  <style>
+    :root{
+      --bg:#f7f7f8; --ink:#0f172a; --sub:#475569; --accent:#16a34a;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{font-family: ui-sans-serif,system-ui,-apple-system,"Noto Sans KR","Apple SD Gothic Neo",Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+
+    .stage{position:relative;min-height:100%;overflow:hidden}
+
+    /* floating icons */
+    .float{position:absolute;opacity:.9;filter:drop-shadow(0 8px 18px rgba(0,0,0,.12));pointer-events:none;will-change:transform}
+
+    /* base up-down + slight lateral drift (no rotation) */
+    @keyframes bob {
+      0%{ transform:translate(0, 0); }
+      50%{ transform:translate(var(--dx, 12px), -24px); }
+      100%{ transform:translate(0, 0); }
+    }
+
+    /* content */
+    .container{position:relative;z-index:5;max-width:880px;margin:0 auto;padding:96px 24px;display:flex;flex-direction:column;align-items:center;text-align:center}
+    .title{font-size:120px;line-height:.9;font-weight:900;letter-spacing:-2px;margin:0 0 12px}
+    .desc{font-size:20px;color:var(--sub);margin:0 0 28px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .btn{appearance:none;border:0;border-radius:14px;padding:12px 18px;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--ink);color:#fff}
+    .btn-ghost{background:#fff;color:var(--ink);box-shadow:0 8px 20px rgba(0,0,0,.08)}
+
+    /* mimic flaticon 404 layout feel: large 404, subtle sub, airy spacing */
+    .note{margin-top:14px;font-size:13px;color:#64748b}
+
+    /* responsive */
+    @media (max-width:640px){
+      .title{font-size:88px}
+      .desc{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="stage" id="stage">
+    <main class="container">
+      <h1 class="title">404</h1>
+      <p class="desc">Oops! Page not found.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/">Go Home</a>
+        <a class="btn btn-ghost" href="/sitemap.xml">Sitemap</a>
+      </div>
+      <div class="note">If you believe this is an error, please contact the site owner.</div>
+    </main>
+  </div>
+
+  <script>
+    // settings
+    const ICON_COUNT = 10;              // pick 10 icons
+    const ICON_POOL = Array.from({length:11}, (_,i)=>String(i+1).padStart(2,'0')); // 01..11
+    const baseSize = 64;                // px; will scale 1.0~2.0 (100~200%)
+    const stage = document.getElementById('stage');
+
+    // helper: random integer / float
+    const rnd = (min,max)=> Math.random()*(max-min)+min;
+
+    // choose 10 distinct items from 11
+    const chosen = ICON_POOL.sort(()=>Math.random()-0.5).slice(0, ICON_COUNT);
+
+    chosen.forEach((name, idx)=>{
+      const img = document.createElement('img');
+      img.src = `/assets/icon/${name}.png`; // adjust path for your site
+      img.alt = `icon ${name}`;
+      img.className = 'float';
+
+      const scale = rnd(1, 2); // 100% ~ 200%
+      const w = baseSize * scale;
+      img.style.width = w + 'px';
+
+      // random initial position (leave 10% margin)
+      img.style.left = rnd(5, 85) + 'vw';
+      img.style.top  = rnd(10, 80) + 'vh';
+
+      // animation: bob with random horizontal drift and duration/delay
+      const dur = rnd(6, 13).toFixed(2) + 's';
+      const delay = (-rnd(0, 10)).toFixed(2) + 's'; // negative to desync immediately
+      img.style.setProperty('--dx', Math.round(rnd(-20, 20)) + 'px');
+      img.style.animation = `bob ${dur} ease-in-out ${delay} infinite`;
+
+      stage.appendChild(img);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>404 - Page Not Found</title>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: #F3F6FD;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      font-family: 'Nunito', Arial, sans-serif;
+    }
+    .title {
+      font-size: 72px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #2457F5;
+      text-align: center;
+    }
+    .subtitle {
+      font-size: 24px;
+      color: #222;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .floating-icon {
+      position: absolute;
+      transition: transform 1s cubic-bezier(.86,0,.07,1);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">404</div>
+  <div class="subtitle">페이지를 찾을 수 없습니다</div>
+
+  <script>
+    // icon 폴더에 01.png ~ 30.png가 존재한다고 가정
+    const TOTAL_ICONS = 11;
+    const ICONS_TO_SHOW = 5;
+
+    // 1~30 중 10개 랜덤 선택 (중복 없이)
+    const allIndices = Array.from({length: TOTAL_ICONS}, (_, i) => i + 1);
+    const selectedIndices = [];
+    while (selectedIndices.length < ICONS_TO_SHOW) {
+      const idx = Math.floor(Math.random() * allIndices.length);
+      selectedIndices.push(allIndices.splice(idx, 1)[0]);
+    }
+
+    // 이미지로 추가
+    selectedIndices.forEach(i => {
+      const img = document.createElement('img');
+      img.src = `./assets/img/icon/${String(i).padStart(2, '0')}.png`;
+      img.className = 'floating-icon';
+      // 랜덤 크기(배율)
+      const scale = 1 + Math.random();
+      img.style.width = `${60 * scale}px`;
+      img.style.height = `${60 * scale}px`;
+      // 랜덤 시작 위치
+      const left = Math.random() * 90;
+      const top = Math.random() * 70;
+      img.style.left = `${left}vw`;
+      img.style.top = `${top}vh`;
+      document.body.appendChild(img);
+
+      // 둥둥이 애니메이션
+      function animate() {
+        const newLeft = Math.min(Math.max(left + (Math.random()-0.5)*12, 1), 93);
+        const newTop = Math.min(Math.max(top + (Math.random()-0.5)*12, 5), 80);
+        img.style.transform = `translate(${newLeft-left}vw, ${newTop-top}vh)`;
+        setTimeout(animate, 3000 + Math.random()*2000);
+      }
+      animate();
+    });
+  </script>
+</body>
+</html>

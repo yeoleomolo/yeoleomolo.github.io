@@ -459,12 +459,31 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 <div class="ftl">안 산 문 화 재 단</div>
 <div class="ftc">Ansan Cultural Foundation<br>© 2026 (재)안산문화재단</div>
 </footer>
-
 <div class="sb" id="sB">
-<button class="sbt" onclick="doS()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>공유하기</button>
-<button class="sbt" onclick="doC()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>링크 복사</button>
+    <button class="sbt" onclick="window.open('https://www.ansanart.com/lay1/bbs/S1T9C24/A/19/view.do?article_seq=323&cpage=1&rows=10&condition=&keyword=', '_blank')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>PDF원본
+    </button>
+    
+    <button class="sbt" onclick="doS()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/>
+        </svg>공유하기
+    </button>
+    
+    <button class="sbt" onclick="doC()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
+        </svg>링크 복사
+    </button>
 </div>
-<div class="tt" id="tt">링크가 복사되었습니다</div>
+    
+    <div class="tt" id="tt">링크가 복사되었습니다</div>
 
 <script>
 var nv=document.getElementById('nav'),sb=document.getElementById('sB');

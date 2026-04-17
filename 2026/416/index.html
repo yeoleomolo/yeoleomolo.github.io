@@ -1,1 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+<title>사월, 다시 피다 · Kashif, Queen Symphony and Beyond</title>
+<meta name="description" content="2026 안산 사운드뮤직아카데미 봄 음악회 · 세월호 12주기 추모 음악회">
+<meta property="og:title" content="사월, 다시 피다 · Kashif, Queen Symphony and Beyond">
+<meta property="og:description" content="2026.4.16.(목) 오후 7시 30분 · 안산문화예술의전당 해돋이극장">
+<meta property="og:type" content="website">
+<meta property="og:image" content="cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#4A7C59;--green-dk:#3A6B35;--red:#B8292F;--red-dk:#9B2226;--purple:#6B5B95;--bg:#FAFAF7;--bg2:#F5F3EE;--tx:#333;--tx2:#777;--tx3:#aaa;--bd:#E0DDD6}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Nanum Myeongjo','Noto Serif KR',serif;color:var(--tx);background:var(--bg);line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
 
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,247,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--bd);transform:translateY(-100%);transition:transform .35s ease}
+.nav.v{transform:translateY(0)}
+.nav-in{max-width:680px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;font-size:.75rem;color:var(--tx2)}
+.nav-r{color:var(--green-dk);font-weight:700;cursor:pointer}
+
+.toc-ov{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .3s}
+.toc-ov.open{opacity:1;pointer-events:auto}
+.toc-p{position:absolute;right:0;top:0;bottom:0;width:min(320px,82vw);background:var(--bg);padding:24px 20px;overflow-y:auto;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);border-left:3px solid var(--green)}
+.toc-ov.open .toc-p{transform:translateX(0)}
+.toc-x{background:none;border:none;font-size:1.6rem;color:var(--tx2);cursor:pointer;float:right;line-height:1}
+.toc-h{font-size:.85rem;font-weight:700;color:var(--green);margin-bottom:16px;padding-top:4px}
+.toc-l{list-style:none}
+.toc-l li{border-bottom:1px solid var(--bd)}
+.toc-l a{display:block;padding:11px 0;text-decoration:none;color:var(--tx);font-size:.82rem;transition:color .2s}
+.toc-l a:hover{color:var(--red)}
+.toc-la{display:block;font-family:'Cormorant Garamond',serif;font-size:.75rem;font-style:italic;color:var(--tx3);margin-top:1px}
+
+/* 표지 */
+.cover{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px 60px;position:relative;background:var(--bg)}
+.cv-top{position:absolute;top:0;left:0;right:0;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;max-width:680px;margin:0 auto}
+.cv-asac{font-size:.72rem;font-weight:700;color:var(--tx);letter-spacing:.04em}
+.cv-asac b{color:var(--green)}
+.cv-acad{font-size:.78rem;color:var(--tx);letter-spacing:.06em}
+.cv-found{font-size:.65rem;color:var(--tx2);text-align:right;line-height:1.4}
+.petal{width:240px;height:240px;margin:20px auto 36px}
+.petal canvas{width:100%;height:100%}
+.cv-en{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:var(--tx);letter-spacing:.06em;margin-bottom:20px}
+.cv-en em{font-style:normal;font-size:.92rem;color:var(--tx2)}
+.cv-kr{font-size:clamp(2.2rem,8vw,3.4rem);font-weight:800;color:var(--green-dk);line-height:1.25;margin-bottom:40px;letter-spacing:-.03em}
+.cv-date{font-size:1.15rem;font-weight:700;margin-bottom:4px}
+.cv-date b{font-size:1.4rem}
+.cv-venue{font-size:.88rem;font-weight:700;margin-bottom:24px}
+.cv-host{font-size:.75rem;color:var(--tx2);padding-top:12px;border-top:1px solid var(--bd);display:inline-block}
+.cv-scr{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:var(--tx3);font-size:.6rem;letter-spacing:.12em;display:flex;flex-direction:column;align-items:center;gap:4px;animation:sh 2.5s ease-in-out infinite}
+.cv-scr::after{content:'';width:1px;height:16px;background:var(--tx3)}
+@keyframes sh{0%,100%{opacity:1;transform:translateX(-50%) translateY(0)}50%{opacity:.3;transform:translateX(-50%) translateY(5px)}}
+
+/* 페이지 공통 */
+.pg{max-width:680px;margin:0 auto;padding:60px 24px;position:relative}
+.pg-hd{display:flex;justify-content:space-between;font-size:.68rem;color:var(--tx3);margin-bottom:40px;padding-bottom:8px;border-bottom:1px solid var(--bd)}
+.pg-hd .r{color:var(--green);font-weight:600}
+.dots{display:flex;justify-content:center;gap:10px;padding:24px 0}
+.dots span{width:6px;height:6px;border-radius:50%;background:var(--green);opacity:.35}
+
+/* 타이틀 */
+.pl{font-size:1.6rem;font-weight:800;color:var(--tx);margin-bottom:24px}
+.tg{font-size:1.5rem;font-weight:800;color:var(--green-dk);margin-bottom:4px;line-height:1.3}
+.tr{font-size:1.4rem;font-weight:800;color:var(--red);margin-bottom:4px;line-height:1.3}
+.trs{font-size:1.1rem;font-weight:700;color:var(--red);margin:32px 0 4px}
+.tp{font-size:1.4rem;font-weight:800;color:var(--purple);margin-bottom:4px;line-height:1.3}
+.tl{font-family:'Cormorant Garamond',serif;font-size:.92rem;font-style:italic;color:var(--tx2);margin-bottom:28px}
+
+/* 빨간 테두리 가사 프레임 */
+.lf{position:relative;margin:20px 0;padding:24px 20px;border:1.5px solid var(--red)}
+.lf::before,.lf::after{content:'';position:absolute;width:12px;height:12px;border-color:var(--red);border-style:solid}
+.lf::before{top:-2px;left:-2px;border-width:3px 0 0 3px}
+.lf::after{top:-2px;right:-2px;border-width:3px 3px 0 0}
+.lf .cbl,.lf .cbr{position:absolute;width:12px;height:12px;border-color:var(--red);border-style:solid}
+.lf .cbl{bottom:-2px;left:-2px;border-width:0 0 3px 3px}
+.lf .cbr{bottom:-2px;right:-2px;border-width:0 3px 3px 0}
+.lt{font-size:.7rem;font-weight:600;color:var(--tx3);letter-spacing:.04em;margin-bottom:6px}
+.ls{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:600;color:var(--tx);letter-spacing:.05em;margin-bottom:14px}
+.lr{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.lk{font-size:.86rem;line-height:2;color:var(--tx)}
+.le{font-size:.84rem;line-height:2;color:var(--tx2)}
+.ch{font-size:.95rem;font-weight:700;line-height:2.1;color:var(--tx)}
+
+/* 프로그램 표 */
+.pt{width:100%;border-collapse:collapse}
+.pt tr{border-bottom:1px solid var(--bd)}
+.pt td{padding:14px 0;vertical-align:top;font-size:.84rem}
+.pp{width:68px;font-weight:700}
+.pn{font-weight:600}
+.pla{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--tx2);font-size:.78rem;display:block;margin-top:2px}
+.pw{text-align:right;color:var(--tx2);font-size:.78rem;padding-left:8px}
+.ni{text-align:center;font-size:.78rem;color:var(--tx3);margin-top:20px}
+
+/* 표지그림 */
+.cat{font-size:1.05rem;font-weight:700;color:var(--green-dk);margin-bottom:16px}
+.caa{font-size:.95rem;font-weight:700;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--green);display:inline-block}
+.cad{font-size:.85rem;color:var(--tx2);line-height:2}
+
+/* 에세이 */
+.es{font-size:.88rem;line-height:2.1}
+.es p{margin-bottom:18px}
+.eq{font-weight:600;color:var(--tx);margin-top:24px;margin-bottom:6px;font-size:.86rem}
+.esp{font-weight:700;color:var(--purple);font-size:.82rem;margin-bottom:4px}
+.slb{text-align:center;margin:28px 0;padding:16px;border:1px solid var(--bd)}
+.slb .sl{font-size:.72rem;color:var(--tx3);margin-bottom:10px;letter-spacing:.08em}
+.slb li{list-style:none;font-family:'Cormorant Garamond',serif;font-size:.85rem;color:var(--tx2);padding:3px 0;letter-spacing:.04em}
+.pb{margin:28px 0;padding:24px;text-align:center;line-height:2.3;font-size:.9rem}
+.pb .b{font-weight:800}
+.pb .a{font-weight:800;color:var(--green-dk)}
+
+/* 인사말 */
+.gs{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.gh{font-size:1.5rem;font-weight:800;line-height:1.4;margin-bottom:4px}
+.gsb{font-size:.88rem;color:var(--tx2);margin-bottom:28px}
+.gb{font-size:.86rem;line-height:2.2}
+.gb p{margin-bottom:16px}
+.gsi{text-align:right;font-size:.82rem;color:var(--tx2);margin-top:24px}
+
+/* 출연진 */
+.sc{display:grid;grid-template-columns:90px 1fr;gap:8px;padding:14px 0;border-bottom:1px solid var(--bd);align-items:baseline}
+.sr{font-size:.78rem;font-weight:700;color:var(--green-dk)}
+.sn{font-size:.95rem;font-weight:700}
+.sd{font-size:.76rem;color:var(--tx2);margin-top:2px}
+.et{font-size:1rem;font-weight:800;color:var(--green-dk);margin:36px 0 6px;padding-bottom:6px;border-bottom:2px solid var(--green)}
+.esb{font-size:.7rem;color:var(--tx3);font-weight:400}
+.er{padding:10px 0;border-bottom:1px solid var(--bd)}
+.ep{font-size:.76rem;font-weight:700;color:var(--red);margin-bottom:3px}
+.en{font-size:.78rem;color:var(--tx2);line-height:1.85}
+.en .p{color:var(--tx);font-weight:600}
+
+/* 연간 */
+.yc{padding:18px 0;border-bottom:1px solid var(--bd)}
+.yc.now{padding:18px 16px;border:2px solid var(--red);border-radius:4px;margin-bottom:12px;background:rgba(184,41,47,.02)}
+.yl{font-size:.7rem;font-weight:700;color:var(--tx3);letter-spacing:.06em;margin-bottom:4px}
+.yc.now .yl{color:var(--red)}
+.yn{font-size:1rem;font-weight:700;margin-bottom:3px}
+.yd{font-size:.8rem;color:var(--tx2)}
+.ydt{font-size:.76rem;color:var(--tx3);margin-top:4px}
+
+.ft{text-align:center;padding:40px 24px;background:var(--bg2);border-top:1px solid var(--bd)}
+.ftl{font-size:.82rem;font-weight:600;color:var(--tx2);letter-spacing:.06em;margin-bottom:6px}
+.ftc{font-size:.68rem;color:var(--tx3)}
+
+.sb{position:fixed;bottom:0;left:0;right:0;z-index:90;background:rgba(250,250,247,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--bd);padding:8px 16px;display:flex;justify-content:center;gap:10px;transform:translateY(100%);transition:transform .35s ease}
+.sb.v{transform:translateY(0)}
+.sbt{padding:7px 18px;border:1px solid var(--bd);border-radius:4px;background:#fff;font-family:'Nanum Myeongjo',serif;font-size:.76rem;color:var(--tx);cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:5px}
+.sbt:hover{border-color:var(--green);color:var(--green)}
+.sbt svg{width:13px;height:13px}
+.tt{position:fixed;bottom:64px;left:50%;transform:translateX(-50%) translateY(16px);background:var(--tx);color:#fff;padding:8px 18px;border-radius:4px;font-size:.76rem;opacity:0;pointer-events:none;transition:all .3s;z-index:95}
+.tt.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media(max-width:600px){
+.pg{padding:44px 18px}.cover{padding:32px 18px 50px}
+.lr{grid-template-columns:1fr;gap:10px}
+.le{padding-left:14px;border-left:1px solid var(--bd);font-size:.8rem}
+.sc{grid-template-columns:1fr;gap:3px}
+.petal{width:200px;height:200px}
+.pw{font-size:.72rem}
+.cv-top{padding:12px 18px}
+}
+
+.fi{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.fi.v{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav"><div class="nav-in"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="nav-r" onclick="toggleTOC()">사월, 다시 피다</span></div></nav>
+
+<div class="toc-ov" id="tocO" onclick="closeTOC()"><div class="toc-p" onclick="event.stopPropagation()">
+<button class="toc-x" onclick="closeTOC()">&times;</button>
+<div class="toc-h">사월, 다시 피다</div>
+<ul class="toc-l">
+<li><a href="#prog" onclick="closeTOC()">프로그램</a></li>
+<li><a href="#cart" onclick="closeTOC()">표지 그림</a></li>
+<li><a href="#pro" onclick="closeTOC()">프롤로그 · 슬픔의 날<span class="toc-la">Pieśni żałosnych</span></a></li>
+<li><a href="#p1" onclick="closeTOC()">1부 · 기억하라 그날<span class="toc-la">Recordare dies illa</span></a></li>
+<li><a href="#p2" onclick="closeTOC()">2부 · 영원한 빛<span class="toc-la">Lux aeterna</span></a></li>
+<li><a href="#p3" onclick="closeTOC()">3부<span class="toc-la">Lacrimosa · Dies irae · Misericordia · Libera me</span></a></li>
+<li><a href="#p4" onclick="closeTOC()">4부<span class="toc-la">Dona nobis pacem · In paradisum</span></a></li>
+<li><a href="#epi" onclick="closeTOC()">에필로그<span class="toc-la">Was mir die Liebe erzählt</span></a></li>
+<li><a href="#n1" onclick="closeTOC()">'슬픔의 날' 작곡가 인터뷰</a></li>
+<li><a href="#n2" onclick="closeTOC()">카쉬프의 '퀸 심포니'</a></li>
+<li><a href="#n3" onclick="closeTOC()">사랑이 내게 말하는 것 — 그날이 오면</a></li>
+<li><a href="#grt" onclick="closeTOC()">인사말</a></li>
+<li><a href="#art" onclick="closeTOC()">출연진</a></li>
+<li><a href="#yr" onclick="closeTOC()">연간 프로그램</a></li>
+</ul>
+</div></div>
+
+<header class="cover" style="padding:0;min-height:auto;display:block;position:relative;">
+<img src="cover.jpg" alt="사월, 다시 피다 · Kashif, Queen Symphony and Beyond · 2026.4.16.(목) 오후 7시 30분 · 안산문화예술의전당 해돋이극장" style="width:100%;height:auto;display:block;">
+<div class="cv-scr" style="position:absolute;bottom:20px;">SCROLL</div>
+</header>
+
+<!-- 프로그램 -->
+<section class="pg fi" id="prog">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="tg">사월, 다시 피다</div>
+<div class="tl" style="margin-bottom:20px">April, Bloom Again</div>
+<table class="pt">
+<tr><td class="pp">프롤로그</td><td class="pn">슬픔의 날<span class="pla">Pieśni żałosnych</span></td><td class="pw">구레츠키, 심포니 3번<br>"슬픈 노래" 3악장<br>M.Sop. 김선정</td></tr>
+<tr><td class="pp">1부</td><td class="pn">기억하라 그날<span class="pla">Recordare dies illa</span></td><td class="pw">카쉬프, 퀸 심포니 1악장</td></tr>
+<tr><td class="pp">2부</td><td class="pn">영원한 빛<span class="pla">Lux aeterna</span></td><td class="pw">카쉬프, 퀸 심포니 3악장<br>Vn. 정하나 ｜ Vc. 박건우</td></tr>
+<tr><td class="pp">3부</td><td class="pn">1장 눈물의 날, 지나가리<span class="pla">Lacrimosa, dies illa</span>2장 정의의 날, 곧 오리라<span class="pla">Dies irae, dies illa</span>3장 그날이 오리니<span class="pla">Misericordia, dies illa</span>4장 이겨내리라<span class="pla">Libera me de morte</span></td><td class="pw" style="vertical-align:bottom">카쉬프, 퀸 심포니 5악장</td></tr>
+<tr><td class="pp">4부</td><td class="pn">1장 평화의 날, 다시 피어나리<span class="pla">Dona nobis pacem</span>2장 한 바람으로 남아<span class="pla">In paradisum, vita aeterna</span></td><td class="pw" style="vertical-align:bottom">카쉬프, 퀸 심포니 6악장</td></tr>
+<tr><td class="pp">에필로그</td><td class="pn">사랑이 내게 말하는 것 — 그날이 오면<span class="pla">Was mir die Liebe erzählt — 그날이 오면</span></td><td class="pw">말러, 심포니 3번<br>6악장 피날레<br>문승현, '그날이 오면'</td></tr>
+</table>
+<div class="ni">- 중간 휴식 없음 -</div>
+</section>
+
+<!-- 표지 그림 -->
+<section class="pg fi" id="cart">
+<div class="cat">「사월, 다시 피다」</div>
+<div class="caa">봉초 이상호</div>
+<div class="cad">이 그림은 특별히 본 음악회를 위해 그린 것으로<br>꽃봉오리를 이루는 한 잎 한 잎이<br>이번에 연주하는 노랫말이다<br><br>2026년 1월<br>화선지에 채색먹물 57cm × 57cm</div>
+</section>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
+<!-- 프롤로그 -->
+<section class="pg fi" id="pro">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="pl">프롤로그</div>
+<div class="tr">슬픔의 날</div>
+<div class="tl">Dzień żałosny</div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span>
+<div class="lr">
+<div class="lk">보고픈 내 아들, 너 어디에 있니?<br>이런 끔찍한 일 누가 저질렀니!<br><br>이 사악한 자들, 말을 왜 못하나<br>소중한 내 아들 왜 죽어야 했나?<br><br>자랑스런 너의 모습 떠올리려 해도<br>지친 나의 눈은 이젠 보이지 않네<br><br>흘린 눈물 모아 바다가 된다 해도<br>떠난 나의 아들 돌아오지 않네<br><br>차가워진 너의 침대도 너를 위해 펴고<br>혹시 모를 무덤조차 너를 위해 파도<br>아무 소용없네<br><br>아무도 모르네<br>어둔 구렁텅에 버려져있는지<br>차디찬 물속에 홀로 떠도는지<br><br>하늘 위의 새야, 노래 불러다오<br>우리 예쁜 아가 찾을 수 있도록<br><br>들판 위의 꽃들아, 환하게 피어다오<br>우리 예쁜 아가 고이 잠들도록<br><br>이 사악한 자들, 말을 왜 못하나<br>소중한 내 아들 왜 죽어야 했나!</div>
+<div class="le">Kajze mi sie podzioł mój synocek miły?<br>Pewnie go w powstaniu złe wrogi zabiły!<br><br>Wy niedobrzy ludzie, dlo Boga świętego<br>Cemuście zabili synocka mojego?<br><br>Zodnej jo podpory juz nie byda miała<br>Choć bych moje stare ocy wypłakała<br><br>Choćby z mych łez gorkich drugo Odra była<br>Jesce by synocka mi nie ozywiła<br><br>Lezy on tam w grobie<br>A jo nie wiem kandy<br>Choc sie opytuja miedzy ludzmi wsandy<br><br>Moze nieborocek lezy kaj w dołecku<br>A mógłby se lygać<br>Na swoim przypiecku<br><br>Ej, ćwierkeycie mu tam, wy ptosecki boze<br>Kiedy mamulicka znalezć go nie moze<br><br>A ty, boze kwiecie, kwitnijze w około<br>Niech sie synockowi choć lezy wesoło<br><br>Wy niedobrzy ludzie, dlo Boga świętego<br>Cemuście zabili synocka mojego!</div>
+</div></div>
+</section>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
+<!-- 1부 -->
+<section class="pg fi" id="p1">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="pl">1부</div>
+<div class="tr">기억하라 그날</div>
+<div class="tl">Recordare dies illa</div>
+
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[오케스트라]</div><div class="ls">RADIO GA GA</div><div class="lr"><div class="lk">부디 흩어지는 소리로 사라지지 마십시오<br>무심한 세상의 배경으로 남지도 마십시오<br><br>저들은 그대를 모르고, 외면하다가<br>빈자리가 되어서야 탓할 뿐입니다<br><br>그대들의 시간, 그대들의 힘은 분명했으나<br>가장 찬란한 순간은, 아직 오지 않았습니다</div><div class="le">So don't become some background noise<br>A backdrop for the girls and boys<br><br>Who just don't know, or just don't care<br>And just complain when you're not there<br><br>You had your time, you had the power<br>You've yet to have your finest hour</div></div></div>
+
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[오케스트라]</div><div class="ls">THE SHOW MUST GO ON</div><div class="lr"><div class="lk">텅 빈 공간<br>-우린 무엇을 위해 사는가<br><br>결국 잊히고 버려질 터<br>-우리는 그 끝을 이미 알고 있으니<br><br>그럼에도 계속해서<br>우리가 무얼 찾고 있는지 아는 자 있는가?<br><br>또다른 영웅, 또다른 무심한 범죄<br>가려진 장막 뒤, 소리없는 연극 속에서<br><br>끝까지 버텨야 한다는데<br>이걸 견뎌낼 사람이 과연 있을까?</div><div class="le">Empty spaces<br>-What are we living for<br><br>Abandoned places<br>-I guess we know the score<br><br>On and on,<br>Does anybody know what we are looking for?<br><br>Another hero, another mindless crime<br>Behind the curtain, in the pantomime<br><br>Hold the line,<br>Does anybody want to take it anymore?</div></div></div>
+
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[합창]</div><div class="ch">기억하라 그날!</div></div>
+
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[오케스트라]</div><div class="ls">ONE VISION</div><div class="lr"><div class="lk">하지만 차가운 바람이 불고<br>검은 비가 내렸지<br>그제야 내 가슴은 알게 되었어<br>보라고, 저들이 나의 꿈에 무슨 짓을 했는지<br><br>그러니 내게 손을 주세요<br>그대의 마음을 주세요<br>난 준비됐어요<br>갈 길은 하나 뿐</div><div class="le">But a cold wind blows<br>And a dark rain falls<br>And in my heart it shows<br>Look, what they've done to my dreams<br><br>So give me your hands<br>Give me your hearts<br>I'm ready<br>There's only one direction</div></div></div>
+
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[합창]</div><div class="ch">오, 내 사랑<br>널 잊지 않으리라<br>오, 결코 못 잊을 내 사랑!</div></div>
+
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[오케스트라]</div><div class="ls">I WAS BORN TO LOVE YOU</div><div class="lr"><div class="lk">난 당신을 사랑하려고 태어났어요<br>내 심장의 모든 박동으로 당신을 사랑하려고<br><br>그래요, 난 당신을 돌보려고 태어났어요<br>내 인생의 모든 하루들로 당신을 돌보려고</div><div class="le">I was born to love you<br>With every single beat of my heart<br><br>Yes, I was born to take care of you<br>Every single day of my life</div></div></div>
+
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[합창]</div><div class="ch">기억하라 그날!</div></div>
+</section>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
+<!-- 2부 -->
+<section class="pg fi" id="p2">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="pl">2부</div><div class="tr">영원한 빛</div><div class="tl">Lux aeterna</div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[오케스트라]</div><div class="ls">WHO WANTS TO LIVE FOREVER</div><div class="lr"><div class="lk">누가 영원히 살길 바라나요?<br>누가 감히 영원히 사랑하길 바라나요?<br><br>우리의 사랑이 죽어야만 하는 그 때<br><br>당신의 입술로 내 눈물을 보듬으면<br>당신의 손끝으로 내 세계를 쓰다듬으면<br><br>우리는 영원할 수 있어요<br>우리는 영원히 사랑할 수 있어요<br><br>우리의 오늘이 곧 영원이에요</div><div class="le">Who wants to live forever?<br>Who dares to love forever?<br><br>When love must die<br><br>But touch my tears with your lips<br>Touch my world with your fingertips<br><br>And we can have forever<br>And we can love forever<br><br>Forever is our today</div></div></div>
+</section>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
+<!-- 3부 -->
+<section class="pg fi" id="p3">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="pl">3부</div>
+<div class="trs">1장 : 눈물의 날, 지나가리</div><div class="tl">Lacrimosa, dies illa</div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[합창]</div><div class="ch">눈물의 날, 그날<br>눈물의 그날, 지나가리</div></div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[오케스트라]</div><div class="ls">BOHEMIAN RHAPSODY (Ballade)</div><div class="lr"><div class="lk">엄마,<br>엄마를 울게 하려는건 아니었어요<br><br>혹시 내가 내일 돌아오지 못해도<br>그저 꿋꿋이, 꿋꿋이 살아가세요<br><br>진짜 아무 일도 없었던 듯</div><div class="le">Mama,<br>Didn't mean to make you cry<br><br>If I'm not back again this time tomorrow<br>Carry on, carry on<br><br>As if nothing really matters</div></div></div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[오케스트라]</div><div class="ls">BOHEMIAN RHAPSODY (Scaramouche — Opera)</div><div class="lr"><div class="lk">한 인간의 비루한 속내가 보인다<br>광대여, 어리석은 광대여!<br>요란한 춤판이라도 벌일 셈인가?</div><div class="le">I see a little silhouetto of a man<br>Scaramouche, Scaramouche!<br>Will you do the Fandango?</div></div></div>
+
+<div class="trs">2장 : 정의의 날, 곧 오리라</div><div class="tl">Dies irae, dies illa</div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[오케스트라]</div><div class="ls">WE WILL ROCK YOU</div><div class="lr"><div class="lk">너, 초라해진 늙은이여<br>이제와서야 비굴한 눈으로<br>평안을 구걸하다니<br><br>네 얼굴은 추악하고, 거대한 치욕이니<br>마땅히 네가 있어야 할 곳으로 보내주겠다<br><br>우리가, 우리가 너를 무너뜨리리라!</div><div class="le">Buddy, you're an old man, poor man<br>Pleading with your eyes,<br>Gonna make you some peace someday<br><br>You got mud on your face, big disgrace<br>Somebody better put you back into your place<br><br>We will, we will rock you!</div></div></div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[합창]</div><div class="ch">심판의 날, 그날<br>다가오는 그날!<br><br>정의의 날, 그날<br>곧 오리라, 그날!</div></div>
+
+<div class="trs">3장 : 그날이 오리니</div><div class="tl">Misericordia, dies illa</div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[합창]</div><div class="ch">엄마,<br>이제는 울지마!<br><br>그날이 오리니<br>반드시, 반드시<br>그날 곧 오리니!</div></div>
+
+<div class="trs">4장 : 이겨내리라</div><div class="tl">Libera me de morte</div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[오케스트라]</div><div class="ls">WE ARE THE CHAMPIONS</div><div class="lr"><div class="lk">벗들이여, 우리가 승리합니다<br>하여 우리는 끝까지 싸워갈 것입니다</div><div class="le">We are the champions, my friends<br>And we'll keep on fighting 'til the end</div></div></div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[합창]</div><div class="ch">이겨내리라, 이겨내리라<br>참고, 참고<br>또 참고, 참아<br>끝내 이기리라!</div></div>
+</section>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
+<!-- 4부 -->
+<section class="pg fi" id="p4">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="pl">4부</div>
+<div class="trs">1장 : 평화의 날, 다시 피어나리</div><div class="tl">Dona nobis pacem</div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[합창]</div><div class="ch">평화의 날, 그날!</div></div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[오케스트라]</div><div class="ls">WHO WANTS TO LIVE FOREVER</div><div class="lr"><div class="lk">누가 영원히 살길 바라나요?<br>누가 감히 영원히 사랑하길 바라나요?<br><br>우리의 사랑이 죽어야만 하는 그 때<br><br>당신의 입술로 내 눈물을 보듬으면<br>당신의 손끝으로 내 세계를 쓰다듬으면<br><br>우리는 영원할 수 있어요<br>우리는 영원히 사랑할 수 있어요<br><br>우리의 오늘이 곧 영원이에요</div><div class="le">Who wants to live forever?<br>Who dares to love forever?<br><br>When love must die<br><br>But touch my tears with your lips<br>Touch my world with your fingertips<br><br>And we can have forever<br>And we can love forever<br><br>Forever is our today</div></div></div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[합창]</div><div class="ch">엄마!<br><br>평화의 그날,<br>다시 피어나리,<br>또 다시 피리라!</div></div>
+
+<div class="trs">2장 : 한 바람으로 남아</div><div class="tl">In paradisum, vita aeterna</div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[합창]</div><div class="ch">한 바람으로 남아<br>영원히 함께 하리<br><br>나의 바람...</div></div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[오케스트라]</div><div class="ls">BOHEMIAN RHAPSODY (Ending)</div><div class="lr"><div class="lk">나는 정말 괜찮아요<br>어차피 바람은 부니까...</div><div class="le">Nothing really matters to me<br>Anyway the wind blows...</div></div></div>
+</section>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
+<!-- 에필로그 -->
+<section class="pg fi" id="epi">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="pl">에필로그</div><div class="tr">사랑이 내게 말하는 것 — 그날이 오면</div><div class="tl">Was mir die Liebe erzählt</div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[오케스트라]</div><div class="ls" style="color:var(--red);line-height:1.7">말러 심포니 2번, 부활의 나팔소리<br>말러 심포니 3번, 6악장 피날레 '사랑이 내게 말하는 것'</div></div>
+<div class="lf"><span class="cbl"></span><span class="cbr"></span><div class="lt">[합창]</div><div class="ch">정의의 물결 넘치는 꿈<br><br>드넓은 평화의 바다에<br>오랜 고통 다 한 후에<br>내 형제 빛나는 두 눈의 뜨거운 눈물<br>고된 땀방울<br>한줄기 강물로 함께 흘러<br><br>한밤의 꿈은 아니리<br><br>그날이 오면<br>내 형제 그리운 얼굴들<br>그 아픈 추억도<br>아 짧았던 내 젊음도<br>헛된 꿈이 아니었으리<br><br><strong style="font-size:1.05rem">그날이 오면, 정의의 그날!</strong></div></div>
+</section>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
+<!-- 프로그램 노트 1 -->
+<section class="pg fi" id="n1">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="tp">'슬픔의 날' 작곡가 인터뷰</div><div class="tl">(상략)</div>
+<div class="es">
+<div class="esp">[구레츠키]</div>
+<p>여기서 가까운 곳에 아우슈비츠 수용소가 있다. 나는 어릴 적부터 이곳에 흩어져 있는 게슈타포 수용소를 보며 자랐다. 수용소에 갇힌 어린 소녀가 벽에 새긴 글을 보라. 우는 어머니를 달래면서 성모 마리아에게 자신들을 버리지 말라고 기도하고 있다. 또한 자식을 잃은 어머니의 통절한 슬픔이 서려 있다. 이들의 눈물이 바로 슬픔의 강이다. '슬픔의 날'은 슬픔의 강이 흐르는 소리라 할 수 있다.</p>
+<div class="eq">Q. 하지만 그것은 과거의 일이다. 과거의 슬픔보다 현재의 슬픔을 드러내는 것이 더 의미 있는 작업이 아닌가?</div>
+<div class="esp">[구레츠키]</div>
+<p>흐르는 강을 자를 수 있다면 당신의 말이 옳다. 하지만 강은 끊임없이 흐른다. 흐르지 않는 것은 이미 강이 아니기 때문이다. 과거로부터 흘러나오는 이 강은 현재를 넘어 미래로 흘러 들어가고 있다. 보스니아 내전의 비극을 보라. 죽고 죽이는 아비규환을 인종의 문제라 생각하는가? 천만에, 그것은 욕망의 비계 덩어리로 숨 쉬고 있는 인간의 문제다. 과거의 슬픔은 곧 현재와 미래의 슬픔이다. 다만, 그 슬픔의 형태가 다를 뿐이다.</p>
+<div class="eq">Q. 그 슬픔의 강가에서 예술가는 무엇을 할 수 있는가?</div>
+<div class="esp">[구레츠키]</div>
+<p>예술가란, 살아남은 자의 형벌을 가장 민감히 느끼는 사람이다. 살아있다는 것은 축복이기도 하지만, 동시에 형벌이기도 하다. 빛은 어둠이 있어야 존재한다. 축복과 형벌은 이 빛과 어둠의 관계다. 그런데, 예술가는 축복보다 형벌에 민감한 사람이다. 그리고 그 형벌을 견뎌내야 한다. 단언컨대, 견디지 못하는 자는 예술가가 아니다. 슬픔의 강은 사람과 사람 사이에서 끊임없이 흐르고 있지만, 그 강이 있는지조차 모르는 사람들이 많다. 이 강이 있음을 일깨우는 사람이 바로 예술가다.</p>
+<div class="eq">Q. 마지막으로 하고 싶은 말은?</div>
+<div class="esp">[구레츠키]</div>
+<p>예술가는 어둠 속에서 빛을 찾는 사람이다. 그런데, 그 빛은 슬픔의 강 너머에 있다.<br>이제 내가 당신들한테 질문하고 싶다. 슬픔의 강은 어떻게 건너는가?</p>
+</div>
+</section>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
+<!-- 프로그램 노트 2 -->
+<section class="pg fi" id="n2">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="tp">카쉬프의 '퀸 심포니'</div><div class="tl">Kashif's Queen Symphony</div>
+<div class="es">
+<p>톨가 카쉬프의 「퀸 심포니(Queen Symphony)」는 퀸의 음악을 교향적 구조로 재창조한 작품으로, 대중음악과 고전음악이 각 문법의 충돌이 아니라 어법의 나눔으로 만날 수 있음을 보여준다.</p>
+<p>카쉬프는 퀸의 음악을 오케스트라의 문법으로 옮기기 위해 원곡의 리듬·화성·선율을 기계적으로 확대하지 않았다. 또한 일반 메들리처럼 단순히 곡을 모아 시간순으로 편곡한 것이 아니라, 서사적 전개를 기준으로 곡들을 재배열하고, 서로 다른 노래들을 하나의 유기적 흐름 속에 결속했다. 예를 들어 'Radio Ga Ga'의 멜로디를 레퀴엠 전례문 '기억하소서 (Recordare)'의 모티프로 치환하는 식으로, 퀸의 핵심 주제와 정서를 추출해 새로운 서사로 교향곡이자 극음악으로 직조했다.</p>
+<p>퀸 심포니는 구조적으로 레퀴엠 서사이지만, 관통하는 정서는 애도와 절망이 아니라 기억과 소망이다. 오케스트라는 특유의 소리 밀도로 기억을 되짚으며 서사를 이어간다. 합창단은 그 서사에 따라 아들이 되기도 하고, 엄마가 되기도 하고, 보편인간으로서 유연하게 부응하거나 역동적으로 대응하기도 하면서 지금 여기 부재하는 자와 존재하는 자를 아울러 보듬는다.</p>
+<p>원곡의 정체성을 훼손하지 않으면서도 관현악만이 구현할 수 있는 음향의 깊이로 새로운 서사를 써낸 이 곡은 '훌륭한 음악이란 무엇인가'라는 오래된 물음에 대한 두가지 대답이다.</p>
+</div>
+<div class="slb"><div class="sl">— 인용곡 —</div><li>RADIO GA GA</li><li>THE SHOW MUST GO ON</li><li>ONE VISION</li><li>I WAS BORN TO LOVE YOU</li><li>WHO WANTS TO LIVE FOREVER</li><li>BOHEMIAN RHAPSODY</li><li>WE WILL ROCK YOU</li><li>WE ARE THE CHAMPIONS</li></div>
+</section>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
+<!-- 프로그램 노트 3 -->
+<section class="pg fi" id="n3">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="tp">사랑이 내게 말하는 것 — 그날이 오면</div><div class="tl">Was mir die Liebe erzählt</div>
+<div class="es">
+<p>이 에필로그는 말러가 작곡한 '사랑이 내게 말하는 것'과 문승현이 작곡한 '그날이 오면'의 멜로디 시작 부분이 구조적, 선율적으로 매우 유사하다는 점에 착안하여 만들어졌다. 하지만 더 깊은 유사성은 정서의 맥락에 있다. '오랜 기다림'과 '꿈'이다.</p>
+<p>세상에서 가장 긴 교향곡이라고 불리는 교향곡 3번을 쓴 말러는 여섯 악장에 각각 이름을 'X가 내게 말하는 것'이라고 붙였었다. 1악장부터 차례로 자연, 꽃, 동물, 인간, 천사, 사랑 순이다. 이 교향곡에선 6악장 전까지 물리적 시간이 약 1시간 20분이나 흘러간다. 그리고나서야 드디어 '사랑'이 내게 말을 건넨다.</p>
+<p>우리는 마지막에 이 '사랑'이 아무런 가사도 없이 내게 말하는 것을 듣고 숭고한 감정으로 가슴이 터질 듯하다. '사랑이 내게 말하는 것'은 단순한 아름다운 멜로디와 근사한 화성의 조합이 아니라 긴 시간을 견디고 참아온 자에게 말러가 주는 숭고한 선물이다.</p>
+</div>
+<div style="text-align:center;font-weight:800;font-size:1rem;margin:32px 0 20px">오랜 기다림의 끝, 그날이 오면</div>
+<div class="es">
+<p>인간이 최초에 '진짜가 아님'을 경험한 것은 무엇일까. 아마도 첫 '꿈'을 꾸고 깨어난 이후였을 것이다. 자신이 꾼 꿈을 '가짜'라고 부른 이후에야, 현실을 '진짜'라고 부를 수 있게 된 셈이다.</p>
+<p>그런데 꿈은 가짜였지만, 현실이 고통스러울수록 그 말은 점점 변해갔다. 환상이란 뜻을 품더니, 나아가서 희망이란 뜻을 품고, 결국 이상이란 뜻이 되어버렸다. 문승현의 '그날이 오면'은 이 진짜와 가짜 꿈을 확신하며 구분한다.</p>
+</div>
+<div class="pb"><p>한밤의 꿈<span class="b">은 아니리</span><br>오랜 고통 다 한 후에<br>내 형제 빛나는 두 눈에<br>뜨거운 눈물들<br>한줄기 강물로 흘러,<br>고된 땀방울 함께 흘러<br>드넓은 평화의 바다에<br><span class="a">정의의 물결 넘치는 꿈</span></p></div>
+<div class="es">
+<p>그래서 다시 피는 4월 오늘, 우리는 1연을 거꾸로 하나하나 되짚어 가며 말러의 멜로디에 얹어 천천히 노래한다.</p>
+</div>
+<div class="pb"><p>한 꿈을 꾼다.<br>그 꿈은 정의의 물결이 넘치는 꿈이다.<br>그 물결은 드넓은 평화의 바다에서 넘실거린다.<br>그 평화의 바다는 한줄기 강물로 흘러와 이루어졌다.<br>그 강물은 고된 땀방울과 뜨거운 눈물들로 만들어졌다.<br>그 눈물은 오랜 고통 받은 내 형제의 두 눈에서 나왔다.<br>그런데 고통에 지쳤음에도 그 두 눈은 찬란히 빛난다.<br><br>이것이 그저 한밤에 잠자다가 꾸는 헛된 가짜 꿈인가.<br>아니, 이것은 내 젊음을 다 바쳐 꿈꾸는 진짜 꿈이다.<br><br><span class="a">'정의'의 그날이 오면,</span><br>그리워할 수 밖에 없는 아픈 추억도,<br>또한 나의 짧았던 젊음도<br>헛된 꿈이 아니었으리!</p></div>
+<div class="es"><p>말러의 꿈, 오랜 기다림의 끝은 '사랑'이 내게 말하는 것이었다. 문승현의 꿈, 오랜 기다림의 끝의 그날은 '정의'의 물결이 넘치는 날이다. 버티며 견디는 시간에 한밤의 꿈은 아득할지 몰라도, 오랜 기다림으로 맞이하는 사랑이 내게 말하는 것은 결코 헛된 꿈이 아니다.</p>
+<p style="text-align:center;font-weight:800;font-size:1rem;color:var(--green-dk);margin-top:24px">사랑은 나에게, 정의의 날을 꿈꾸라고 말한다.</p></div>
+</section>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
+<!-- 인사말 -->
+<section class="pg gs fi" id="grt">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="gh">세월호 12주기,<br>한 띠가 되어 한 띠를 두르다</div>
+<div class="gsb">180인의 소리로 전하는 위로</div>
+<div class="gb">
+<p>2026 ASAC 클래식 〈안산 사운드뮤직아카데미〉의 첫 번째 무대로 봄 음악회 〈사월, 다시 피다〉를 선보이게 되어 진심으로 기쁩니다.</p>
+<p>공연이 열리는 4월 16일은 안산이라는 도시에 각별한 의미를 지닌 날입니다. 오늘 공연장을 가득 채울 선율이 여러분의 마음속에 오래도록 따뜻하게 남기를 바랍니다.</p>
+<p>안산문화재단은 지휘자 구자범의 손끝을 통해, 퀸의 음악이 품은 감정과 서사가 오늘을 살아가는 우리에게 어떻게 '이 시대의 레퀴엠'으로 닿을 수 있는지를 함께 나누고자 합니다. 익숙한 선율 속에 새롭게 깃든 의미와 시선을 통해, 음악만이 건넬 수 있는 치유의 힘을 느껴보시기를 바랍니다.</p>
+<p>이번 무대를 위해 특별히 결성된 80인의 '봄 프로젝트오케스트라'와 100여 명의 '봄 프로젝트콰이어'가 하나의 목소리로 공연장을 가득 채웁니다.</p>
+<p>〈사월, 다시 피다〉의 자리에 함께해 주신 모든 분께 깊이 감사드립니다. 봄날의 선율이 여러분의 마음을 따스하게 어루만지는 소중한 시간이 되기를 진심으로 소망합니다.</p>
+<div class="gsi">—안산문화재단</div>
+</div>
+</section>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
+<!-- 출연진 -->
+<section class="pg fi" id="art">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="tg" style="font-size:1.2rem">출연진</div><div class="tl">Artists</div>
+<div class="sc"><div class="sr">지휘</div><div><div class="sn">구자범</div><div class="sd">안산 사운드뮤직아카데미 음악감독</div></div></div>
+<div class="sc"><div class="sr">메조 소프라노</div><div><div class="sn">김선정</div><div class="sd">국립·시립오페라단 주역가수</div></div></div>
+<div class="sc"><div class="sr">바이올린</div><div><div class="sn">정하나</div><div class="sd">인천시립교향악단 악장</div></div></div>
+<div class="sc"><div class="sr">첼로</div><div><div class="sn">박건우</div><div class="sd">Pos 트리오</div></div></div>
+
+<div class="et">봄 프로젝트오케스트라 <span class="esb">(가나다 순)</span></div>
+<div class="er"><div class="ep">제1바이올린</div><div class="en">고찬미 박윤주 박지수 심지예 안은지 이수민 이은영 이현주 정민영 <span class="p">정하나(악장, 수석)</span> 정한빛 조요한 한지예 홍경화</div></div>
+<div class="er"><div class="ep">제2바이올린</div><div class="en">강현옥 김안나 김진영 김채을 김희영 사윤빈 오민정 오서영 <span class="p">이재흠(수석)</span> 이정현 이화진 장희영 지춘섭</div></div>
+<div class="er"><div class="ep">비올라</div><div class="en">강승주 김대건 김성윤 김유리 <span class="p">신지섭(수석)</span> 안진웅 오상민 이한솔 현성 황승묵</div></div>
+<div class="er"><div class="ep">첼로</div><div class="en">김나원 김유진 김채경 <span class="p">박건우(수석)</span> 우아람 윤성연 최고은 함수민</div></div>
+<div class="er"><div class="ep">더블베이스</div><div class="en">강모로 박소연 <span class="p">박재홍(수석)</span> 오주영 장유리 한현성</div></div>
+<div class="er"><div class="ep">플루트</div><div class="en">이효연 <span class="p">정민규(수석)</span> 최지은</div></div>
+<div class="er"><div class="ep">오보에</div><div class="en">김그린 <span class="p">서보영(수석)</span></div></div>
+<div class="er"><div class="ep">클라리넷</div><div class="en">노은솔 <span class="p">이선율(수석)</span></div></div>
+<div class="er"><div class="ep">바순</div><div class="en"><span class="p">김자성(수석)</span> 이원림</div></div>
+<div class="er"><div class="ep">호른</div><div class="en">기현경 <span class="p">배송아(수석)</span> 이석재 조상현 최지혜 황해리</div></div>
+<div class="er"><div class="ep">트럼펫</div><div class="en"><span class="p">김은성(수석)</span> 김재현 김진겸 신승조</div></div>
+<div class="er"><div class="ep">트롬본</div><div class="en">안치정 윤병재 <span class="p">최정원(수석)</span></div></div>
+<div class="er"><div class="ep">튜바</div><div class="en">성의제</div></div>
+<div class="er"><div class="ep">하프</div><div class="en">박혜정</div></div>
+<div class="er"><div class="ep">팀파니</div><div class="en">황영광</div></div>
+<div class="er"><div class="ep">타악기</div><div class="en">박혜림 신주하 오정민 유요한 윤현준</div></div>
+<div class="er"><div class="ep">지휘 어시스턴트</div><div class="en">이승준</div></div>
+
+<div class="et">봄 프로젝트콰이어 <span class="esb">(가나다 순)</span></div>
+<div class="er"><div class="ep">소프라노</div><div class="en">감수현 고희경 곽은정 권지원 김민지 김백선 김형연 민다희 박채현 방혜원 성지연 여혜숙 오정현 오현아 유정현 윤경화 이민정 이상윤 이성라 이은혜 정솔이 정이제 주선영 진예진 한다혜 황미아</div></div>
+<div class="er"><div class="ep">알토</div><div class="en">고우리 권유빈 김청은 김현순 김효원 서미영 손수희 송진아 윤나래 이예지 이주희 이진영 이한솔 이혜근 임유빈 전수빈 정혜원 최현숙 한지혜 홍지희 홍혜경</div></div>
+<div class="er"><div class="ep">테너</div><div class="en">고원석 김경호 김동현 김두원 김범근 김병헌 김선용 김양연 김현윤 류신기 박대열 박성빈 박인수 박정윤 박창우 신정우 오혜성 윤영규 이상진 이재욱 이준성 이혁재 조한규</div></div>
+<div class="er"><div class="ep">베이스</div><div class="en">김원희 김찬우 김찬현 박준영 사제환 손태준 송재혁 양재민 유동환 유영동 유원종 윤대근 윤성훈 이경환 이대훈 이수현 이승훈 이종건 이종성 장영기 전명석 정재원 조형준 조환용 최종환 최홍석 홍성호</div></div>
+<div class="er"><div class="ep">피아노</div><div class="en">박원후</div></div>
+
+<div style="margin-top:24px;padding-top:14px;border-top:1px solid var(--bd);font-size:.78rem;color:var(--tx2)">제작｜멜팅코드 &nbsp; 김민경 정승연<br>진행 &nbsp; 배재희 장민규</div>
+</section>
+
+<div class="dots"><span></span><span></span><span></span></div>
+
+<!-- 연간 프로그램 -->
+<section class="pg fi" id="yr">
+<div class="pg-hd"><span>안산 사운드뮤직아카데미. 봄 음악회</span><span class="r">사월, 다시 피다</span></div>
+<div class="tg" style="font-size:1rem">2026 ASAC 클래식</div>
+<div class="tg">안산 사운드뮤직아카데미</div>
+<div class="tl">연간 프로그램</div>
+<div class="yc now"><div class="yl">봄 음악회</div><div class="yn">사월, 다시 피다</div><div class="yd">4월 16일(목) 오후 7시 30분 ｜ 해돋이극장</div><div class="ydt">지휘 구자범, 메조 소프라노 김선정, 바이올린 정하나, 첼로 박건우, 봄 프로젝트콰이어, 봄 프로젝트오케스트라</div></div>
+<div class="yc"><div class="yl">여름 렉쳐 콘서트</div><div class="yn">서곡이란 무엇인가</div><div class="yd">7월 25일(토) 오후 3시 ｜ 해돋이극장</div><div class="ydt">지휘 구자범, 봄 프로젝트오케스트라</div></div>
+<div class="yc"><div class="yl">가을 콘서트 렉쳐 1</div><div class="yn">The Sound of Music</div><div class="yd">10월 28일(수) 오후 7시 30분 ｜ 별무리극장</div></div>
+<div class="yc"><div class="yl">가을 콘서트 렉쳐 2</div><div class="yn">The Sound of Silence</div><div class="yd">11월 25일(수) 오후 7시 30분 ｜ 별무리극장</div></div>
+<div class="yc"><div class="yl">겨울 음악회</div><div class="yn">Melancholy in Christmas</div><div class="yd">12월 23일(수) 오후 7시 30분 ｜ 달맞이극장</div><div class="ydt">지휘 구자범, 소프라노 오미선 외, 봄 프로젝트오케스트라</div></div>
+</section>
+
+<footer class="ft">
+<div class="ftl">안 산 문 화 재 단</div>
+<div class="ftc">Ansan Cultural Foundation<br>© 2026 (재)안산문화재단</div>
+</footer>
+
+<div class="sb" id="sB">
+<button class="sbt" onclick="doS()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>공유하기</button>
+<button class="sbt" onclick="doC()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>링크 복사</button>
+</div>
+<div class="tt" id="tt">링크가 복사되었습니다</div>
+
+<script>
+var nv=document.getElementById('nav'),sb=document.getElementById('sB');
+window.addEventListener('scroll',function(){var y=window.scrollY;nv.classList.toggle('v',y>300);sb.classList.toggle('v',y>300)});
+function toggleTOC(){document.getElementById('tocO').classList.toggle('open')}
+function closeTOC(){document.getElementById('tocO').classList.remove('open')}
+var ob=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('v')})},{threshold:.06});
+document.querySelectorAll('.fi').forEach(function(el){ob.observe(el)});
+function doS(){if(navigator.share){navigator.share({title:'사월, 다시 피다',text:'2026.4.16.(목) 오후 7시 30분 · 안산문화예술의전당',url:location.href}).catch(function(){})}else doC()}
+function doC(){navigator.clipboard.writeText(location.href).then(function(){var t=document.getElementById('tt');t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2000)})}
+</script>
+</body>
+</html>
